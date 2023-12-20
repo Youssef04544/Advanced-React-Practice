@@ -1,9 +1,9 @@
-import Starter from "./tutorial/03-conditional-rendering/starter/07-user-challenge.jsx";
+import List from "./tutorial/05-leverage-javascript/final/List";
 
 function App() {
   return (
     <div className="container">
-      <Starter />
+      <List />
     </div>
   );
 }
