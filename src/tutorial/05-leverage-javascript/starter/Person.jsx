@@ -1,22 +1,13 @@
+import avatar from "../../../assets/default-avatar.svg";
 import React from "react";
 
-export function Person({ person }) {
+export function Person({ name, nickName = "soMainStream", images }) {
+  const img = images?.[0].small.url;
   return (
     <div>
-      <li>{person.name}</li>
-      <li>{person?.nickName}</li>
-      {person.images ? (
-        <li>
-          <img
-            src={person.images[0].small.url}
-            alt={person.name}
-            width={200}
-            length={200}
-          />
-        </li>
-      ) : (
-        ""
-      )}
+      <img src={img || avatar} alt={name} width={"50px"} />
+      <li>{name}</li>
+      <li>{nickName}</li>
     </div>
   );
 }
