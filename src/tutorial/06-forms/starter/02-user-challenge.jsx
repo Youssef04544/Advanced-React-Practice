@@ -8,6 +8,7 @@ const UserChallenge = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setUsers((prevUsers) => [...prevUsers, { id: users.length + 1, name }]);
+    setName("");
   };
 
   const handleDelete = (id) => {
